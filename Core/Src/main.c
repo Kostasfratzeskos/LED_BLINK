@@ -97,10 +97,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 1); // PB5
+	HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 1); // PA5
 	HAL_Delay(1000);
 
-	HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 0); // PB5
+	HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 0); // PA5
 	HAL_Delay(1000);
   }
   /* USER CODE END 3 */
