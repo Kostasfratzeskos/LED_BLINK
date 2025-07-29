@@ -1,4 +1,6 @@
-In this project i am going to make the Led2 on the nucleo stm32f401re board blink.
+# 💡 Blinking LED2 on Nucleo STM32F401RE
+
+In this project i am going to make the Led2 on the nucleo stm32f401re board blink. ✨
 
 First of all we go to the hardware configuration file "Pinout and configuration" to set PA5 as GPIO_Output (this pin is connected to LED2 that we want to blink).
 
