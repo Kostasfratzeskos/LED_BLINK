@@ -12,6 +12,7 @@ Then we press ctrl + s and save the project to generate code. In the generated c
 	HAL_Delay(1000);
 
  Some notes here that are important
+ 
  --> We have to write the user code within the commented area because when we build the project only this part of code is going to be saved.
  --> We use HAL(Hardware Abstraction Level) library
  --> We could do it without the use of HAL library in a more complex, bare metal way like this:
