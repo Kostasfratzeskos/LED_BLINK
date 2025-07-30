@@ -13,11 +13,11 @@ Then we save the project to generate code. In the generated code we go in to whi
 
  Some notes here that are important
  
- --> We have to write the user code within the commented area because when we build the project only this part of code is going to be saved.
+ :one: We have to write the user code within the commented area because when we build the project only this part of code is going to be saved.
  
- --> We use HAL(Hardware Abstraction Level) library
+ 2️⃣ We use HAL(Hardware Abstraction Level) library
  
- --> We could do it without the use of HAL library in a more complex, bare metal way like this:
+ 3️⃣ We could do it without the use of HAL library in a more complex, bare metal way like this:
  
     // 1. Enable GPIOA clock (bit 0 of AHB1ENR)
     RCC->AHB1ENR |= (1<<0); // or RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
