@@ -4,12 +4,12 @@ In this project i am going to make the Led2 on the nucleo stm32f401re board blin
 
 First of all we go to the hardware configuration file "Pinout and configuration" to set PA5 as GPIO_Output (this pin is connected to LED2 that we want to blink).
 
-Then we press ctrl + s and save the project to generate code. In the generated code we go in to while loop ("User code begin 3") and write the above code:
+Then we save the project to generate code. In the generated code we go in to while loop ("User code begin 3") and write the above code:
  
-  HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 1); // PA5
-	HAL_Delay(1000);
-  HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 0); // PA5
-	HAL_Delay(1000);
+    HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 1); // PA5
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 0); // PA5
+    HAL_Delay(1000);
 
  Some notes here that are important
  
@@ -19,8 +19,8 @@ Then we press ctrl + s and save the project to generate code. In the generated c
  
  --> We could do it without the use of HAL library in a more complex, bare metal way like this:
  
-     // 1. Enable GPIOA clock (bit 0 of AHB1ENR)
-     RCC->AHB1ENR |= (1<<0); // or RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+    // 1. Enable GPIOA clock (bit 0 of AHB1ENR)
+    RCC->AHB1ENR |= (1<<0); // or RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
     // 2. Set PA5 as output (MODER5 = 0b01)
     GPIOA->MODER &= ~(3 << (5 * 2)); // Clear mode bits for PA5
     GPIOA->MODER |=  (1 << (5 * 2)); // Set as general purpose output
