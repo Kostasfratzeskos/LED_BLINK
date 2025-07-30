@@ -39,4 +39,6 @@ Then we save the project to generate code. In the generated code we go in to whi
     {
       for(uint32_t i = 0; i < ms * 4000; i++) __NOP();
     }
-After we build the code and run it if the board is connected to your PC.
+After we build the code and run it, if the board is connected to your PC.
+
+Now we should see the LED blinking.
