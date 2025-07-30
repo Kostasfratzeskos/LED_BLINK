@@ -11,6 +11,11 @@ Then we save the project to generate code. In the generated code we go in to whi
     HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 0); // PA5
     HAL_Delay(1000);
 
+HAL_GPIO_WritePin ➡️ void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+💠 GPIOx : The GPIO port where the pin is located, e.g. GPIOA, GPIOB, etc.
+💠 GPIO_Pin : The specific pin number you want to write to, e.g. GPIO_Pin_5.
+💠 Pinstate : The value to write.
+
  Some notes here that are important
  
  :one: We have to write the user code within the commented area because when we build the project only this part of code is going to be saved.
