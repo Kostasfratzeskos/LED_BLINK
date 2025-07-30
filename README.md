@@ -11,7 +11,7 @@ Then we save the project to generate code. In the generated code we go in to whi
     HAL_GPIO_WritePin (GPIOA, GPIO_PIN_5, 0); // PA5
     HAL_Delay(1000);
 
- Some notes here that are important
+ 📓 Some notes here that are important
  
  :one: We have to write the user code within the commented area because when we build the project only this part of code is going to be saved.
  
