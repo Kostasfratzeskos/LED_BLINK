@@ -2,6 +2,8 @@
 
 In this project i am going to make the Led2 on the nucleo stm32f401re board blink. ✨
 
+I used Stm32Cube for the following steps.
+
 First of all we go to the hardware configuration file "Pinout and configuration" to set PA5 as GPIO_Output (this pin is connected to LED2 that we want to blink).
 
 Then we save the project to generate code. In the generated code we go in to while loop ("User code begin 3") and write the above code:
@@ -20,6 +22,14 @@ This function directly writes to the GPIO output data register (ODR or BSRR) to 
 💠 GPIO_Pin : The specific pin number you want to write to, e.g. GPIO_Pin_5.
 
 💠 Pinstate : The value to write.
+
+📕 void HAL_Delay();
+
+💠 HAL_Delay uses the SysTick timer (typically configured in HAL_Init() ) to create a delay.
+
+   --> The SysTick timer is a core peripheral in ARM Cortex-M microcontrollers that provides a simple way to create periodic interrupts or delays. 
+   
+💠 It is a blocking function, meaning the CPU will stop executing other tasks until the delay is complete.
 
  Some notes here that are important
  
